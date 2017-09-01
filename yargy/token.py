@@ -59,7 +59,7 @@ class Multitoken(Token):
             else:
                 forms = [
                     _ for _ in token.forms
-                    if _.normalized == normalized
+                    if _.normalized == normalized or _.normalized == normalized.replace('е', 'ё')
                 ]
                 if forms:
                     for form in forms:
